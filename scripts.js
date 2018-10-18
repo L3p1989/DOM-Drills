@@ -68,5 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    var ol = document.createElement('ol')
+    document.body.appendChild(ol)
 
 });
