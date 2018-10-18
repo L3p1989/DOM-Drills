@@ -46,29 +46,44 @@ document.addEventListener("DOMContentLoaded", function () {
     h6.appendChild(h6Text);//this adds text to h6
     headerContainer[0].appendChild(h6);//this adds h6 to headerContainer
 
-    h1.className = 'h1'
-    h2.className = 'h2'
-    h3.className = 'h3'
-    h4.className = 'h4'
-    h5.className = 'h5'
-    h6.className = 'h6'
+    h1.className = 'h1';
+    h2.className = 'h2';
+    h3.className = 'h3';     //h1-6 classnames
+    h4.className = 'h4';
+    h5.className = 'h5';
+    h6.className = 'h6';
 
     function randomColor() {
-        var colorArray = ['green', 'purple', 'orange', 'red', 'blue', 'yellow', 'black', 'aqua']
-        var randomizer = Math.floor((Math.random() * colorArray.length))
-        return colorArray[randomizer]
-    };
+        var colorArray = ['green', 'purple', 'orange', 'red', 'blue', 'yellow', 'black', 'aqua'];
+        var randomizer = Math.floor((Math.random() * colorArray.length));
+        return colorArray[randomizer];
+    };  //this function will allow you to change the color of anything randomly between all listed colors
 
     headerContainer[0].addEventListener('dblclick', headerClick, false);
 
     function headerClick(e) {
         if (e.target !== e.currentTarget) {
             e.target.style.color = randomColor()
-        }// children can be clicked but not parent, add color
+        };// children can be clicked but not parent, add color
 
-    }
+    };
 
-    var ol = document.createElement('ol')
-    document.body.appendChild(ol)
+    var ol = document.createElement('ol');
+    document.body.appendChild(ol); //this adds an ol to the body
+
+    var btn = document.getElementsByClassName('list-btn');
+
+    var liNum = 0;
+
+    btn[0].addEventListener('click', function() {
+
+        var li = document.createElement('li');
+        var liText = document.createTextNode('this is list item ' + liNum);
+        
+        liNum++;//this is the number counter for `li` items
+        li.append(liText);//appends each li with `liText`
+        ol.appendChild(li);//adds li to ol
+
+    })
 
 });
