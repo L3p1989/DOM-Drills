@@ -92,8 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
         };
-       
+
+        li.addEventListener('dblclick', function(e) {
+            ol.removeChild(e.target)
+        });
     })
 
+    
 
 });
