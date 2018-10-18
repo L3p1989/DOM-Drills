@@ -73,17 +73,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var btn = document.getElementsByClassName('list-btn');
 
-    var liNum = 0;
+    var liNum = 1;
 
-    btn[0].addEventListener('click', function() {
+    btn[0].addEventListener('click', function () {
 
         var li = document.createElement('li');
         var liText = document.createTextNode('this is list item ' + liNum);
-        
+
         liNum++;//this is the number counter for `li` items
         li.append(liText);//appends each li with `liText`
         ol.appendChild(li);//adds li to ol
 
+        ol.addEventListener('click', liClick, false);
+
+        function liClick(e) {
+            if (e.target !== e.currentTarget) {
+                e.target.style.color = randomColor()
+            };
+
+        };
+       
     })
+
 
 });
