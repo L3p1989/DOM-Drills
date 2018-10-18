@@ -54,10 +54,18 @@ document.addEventListener("DOMContentLoaded", function () {
     h6.className = 'h6'
     
     function randomColor() {
-        var colorArray = ['green', 'purple', 'orange', 'red', 'blue', 'yellow']
+        var colorArray = ['green', 'purple', 'orange', 'red', 'blue', 'yellow', 'black', 'aqua']
         var randomizer = Math.floor((Math.random() * colorArray.length))
+        return colorArray[randomizer]
     };
 
+    headerContainer[0].addEventListener('dblclick', headerClick, false);
 
-    
+    function headerClick(e) {
+        if (e.target !== e.currentTarget) {
+            e.target.style.color = randomColor()
+        }
+        
+    }
+
 });
