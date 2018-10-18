@@ -68,12 +68,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    var btn = document.createElement('button')
-    var btnText = document.createTextNode("Click to add new list item")
-
-    document.body.appendChild(btn)
-    btn.appendChild(btnText)
-
-    btn.className = 'list-button'
 
 });
