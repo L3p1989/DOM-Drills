@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     var div1 = document.createElement('div');
-    var div2 = document.createElement('div');
     
     // var headerText = document.createTextNode("the headerContainer is working");// this creates the variable to test headerContainer's functionality
 
@@ -17,5 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
     h1.appendChild(h1Text);//this adds the h1Text to h1
     headerContainer[0].appendChild(h1);//this creates the h1 in the 'header-container' `div`
 
+    var h2 = document.createElement('h2')
+    var h2Text = document.createTextNode("This is an h2")
 
+    
 });
