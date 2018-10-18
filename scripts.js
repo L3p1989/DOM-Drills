@@ -16,8 +16,33 @@ document.addEventListener("DOMContentLoaded", function () {
     h1.appendChild(h1Text);//this adds the h1Text to h1
     headerContainer[0].appendChild(h1);//this creates the h1 in the 'header-container' `div`
 
-    var h2 = document.createElement('h2')
-    var h2Text = document.createTextNode("This is an h2")
+    var h2 = document.createElement('h2');
+    var h2Text = document.createTextNode("This is an h2");
 
-    
+    h2.appendChild(h2Text);//this adds text to h2
+    headerContainer[0].appendChild(h2);//this adds h2 to headerContainer
+
+    var h3 = document.createElement('h3');
+    var h3Text = document.createTextNode("This is an h3");
+
+    h3.appendChild(h3Text);//this adds text to h3
+    headerContainer[0].appendChild(h3);//this adds h3 to headerContainer
+
+    var h4 = document.createElement('h4');
+    var h4Text = document.createTextNode("This is an h4");
+
+    h4.appendChild(h4Text);//this adds text to h4
+    headerContainer[0].appendChild(h4);//this adds h4 to headerContainer
+
+    var h5 = document.createElement('h5');
+    var h5Text = document.createTextNode("This is an h5");
+
+    h5.appendChild(h5Text);//this adds text to h5
+    headerContainer[0].appendChild(h5);//this adds h5 to headerContainer
+
+    var h6 = document.createElement('h6');
+    var h6Text = document.createTextNode("This is an h6");
+
+    h6.appendChild(h6Text);//this adds text to h6
+    headerContainer[0].appendChild(h6);//this adds h6 to headerContainer
 });
