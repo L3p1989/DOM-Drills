@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     var div1 = document.createElement('div');
-    
+
     // var headerText = document.createTextNode("the headerContainer is working");// this creates the variable to test headerContainer's functionality
 
     div1.className = "header-container";// this line assigns a classname of "header-container" to headerContainer
 
     document.body.appendChild(div1);// this line pulls div1 into the body of the html
-    
+
     var headerContainer = document.getElementsByClassName("header-container");
     // headerContainer[0].appendChild(headerText);// this puts text in headerContainer to ensure it is working
-    
+
     var h1 = document.createElement('h1');
     var h1Text = document.createTextNode("This is an h1");
 
@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
     h6.appendChild(h6Text);//this adds text to h6
     headerContainer[0].appendChild(h6);//this adds h6 to headerContainer
 
-    h1.className = 'h1' 
+    h1.className = 'h1'
     h2.className = 'h2'
     h3.className = 'h3'
     h4.className = 'h4'
     h5.className = 'h5'
     h6.className = 'h6'
-    
+
     function randomColor() {
         var colorArray = ['green', 'purple', 'orange', 'red', 'blue', 'yellow', 'black', 'aqua']
         var randomizer = Math.floor((Math.random() * colorArray.length))
@@ -64,8 +64,16 @@ document.addEventListener("DOMContentLoaded", function () {
     function headerClick(e) {
         if (e.target !== e.currentTarget) {
             e.target.style.color = randomColor()
-        }
-        
+        }// children can be clicked but not parent, add color
+
     }
+
+    var btn = document.createElement('button')
+    var btnText = document.createTextNode("Click to add new list item")
+
+    document.body.appendChild(btn)
+    btn.appendChild(btnText)
+
+    btn.className = 'list-button'
 
 });
