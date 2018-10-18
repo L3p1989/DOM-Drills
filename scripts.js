@@ -45,4 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     h6.appendChild(h6Text);//this adds text to h6
     headerContainer[0].appendChild(h6);//this adds h6 to headerContainer
+
+    h1.className = 'h1' 
+    h2.className = 'h2'
+    h3.className = 'h3'
+    h4.className = 'h4'
+    h5.className = 'h5'
+    h6.className = 'h6'
+    
 });
