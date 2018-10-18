@@ -53,4 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
     h5.className = 'h5'
     h6.className = 'h6'
     
+    function randomColor() {
+        var colorArray = ['green', 'purple', 'orange', 'red', 'blue', 'yellow']
+        var randomizer = Math.floor((Math.random() * colorArray.length))
+    };
+
+
+    
 });
